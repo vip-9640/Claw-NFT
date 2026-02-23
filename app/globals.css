@@ -1,0 +1,72 @@
+:root {
+  --bg: #0b1020;
+  --bg2: #1b2644;
+  --text: #e6ecff;
+  --card: rgba(16, 20, 38, 0.85);
+  --accent: #7e5bef;
+}
+
+:root[data-theme='light'] {
+  --bg: #eef3ff;
+  --bg2: #dbe6ff;
+  --text: #15203b;
+  --card: rgba(255, 255, 255, 0.88);
+  --accent: #4f46e5;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 10% 10%, var(--bg2), var(--bg));
+  min-height: 100vh;
+  animation: pulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; display: grid; gap: 20px; }
+.card { background: var(--card); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(10px); border-radius: 16px; padding: 18px; }
+.row { display: flex; align-items: center; }
+.between { justify-content: space-between; }
+.gap { gap: 10px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 8px; }
+
+.logo-wrap { display: flex; align-items: center; gap: 10px; }
+.logo-mark { display: flex; gap: 4px; }
+.logo-mark span { width: 14px; height: 22px; border-radius: 8px 8px 2px 2px; background: linear-gradient(180deg, #ff9d6c, #ff4d8d); }
+.logo-wrap p { margin: 0; font-size: 12px; opacity: .7; }
+
+.btn, .select, .input {
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.2);
+  padding: 10px 14px;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+}
+.btn { cursor: pointer; transition: transform .2s ease; }
+.btn:hover { transform: translateY(-1px) scale(1.03); }
+.btn.small { width: 100%; margin-top: 8px; }
+.btn.ghost { background: transparent; }
+.select, .input { width: fit-content; }
+
+.nft-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.nft-card {
+  background: rgba(255,255,255,.05);
+  border-radius: 12px;
+  padding: 12px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.nft-card:hover { transform: scale(1.02); box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+.nft-art { height: 120px; border-radius: 10px; margin-bottom: 10px; }
+.nft-card p, .nft-card h3 { margin: 6px 0; }
+
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: grid; place-items: center; }
+.modal { width: min(500px, 90vw); display: grid; gap: 12px; }
+.footer { display: flex; justify-content: space-between; opacity: .75; font-size: 14px; padding: 6px 2px 20px; }
+
+a { color: #7db4ff; }
