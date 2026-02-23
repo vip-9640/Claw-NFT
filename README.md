@@ -66,6 +66,7 @@ http://localhost:3000
 - It publishes memo transactions to Solana for verifiable action signatures.
 - For full on-chain NFT minting (Metaplex token metadata + mint account), extend `mintNFT.js` with SPL Token + Metaplex flows.
 
+<<<<<<< codex/build-claw-nft-solana-web3-application-ak9adu
 
 ## Vercel Deployment Notes
 
@@ -81,3 +82,5 @@ Recommended Vercel settings:
 - **Build command:** `npm run build`
 - **Install command:** `npm install`
 
+=======
+>>>>>>> main
