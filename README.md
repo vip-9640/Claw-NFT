@@ -66,3 +66,21 @@ http://localhost:3000
 - It publishes memo transactions to Solana for verifiable action signatures.
 - For full on-chain NFT minting (Metaplex token metadata + mint account), extend `mintNFT.js` with SPL Token + Metaplex flows.
 
+<<<<<<< codex/build-claw-nft-solana-web3-application-ak9adu
+
+## Vercel Deployment Notes
+
+If you saw npm install errors on Vercel before, this project now uses a simplified and more compatible dependency set:
+
+- Removed direct per-wallet adapter package pins (which can introduce version resolution conflicts).
+- Kept `@solana/wallet-adapter-wallets` as the wallet bundle source.
+- Pinned React/ReactDOM to stable `18.2.0` for Next.js 14 compatibility.
+
+Recommended Vercel settings:
+
+- **Node.js version:** 18.x or 20.x
+- **Build command:** `npm run build`
+- **Install command:** `npm install`
+
+=======
+>>>>>>> main
